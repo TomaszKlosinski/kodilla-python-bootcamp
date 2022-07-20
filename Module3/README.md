@@ -10,7 +10,7 @@ Local environment - all the software programmers need for their work installed o
 
 
 ### Terminal
-Terminal emulator is an application running shell and allowing to execute commands within.
+Terminal emulator is an application running shell and used to execute commands in it.
 
 See more here:
 * https://en.wikipedia.org/wiki/List_of_Unix_commands
@@ -66,9 +66,47 @@ To start ipython run:
 A source-code editor is a text editor program designed specifically for editing source code of computer programs. 
 
 Good examples of Python source code editors are:
-* Visual Studio Code (VSCode)
+* [Visual Studio Code](https://code.visualstudio.com/) (VSCode)
 
 An integrated development environment (IDE) is a software application that provides comprehensive facilities to computer programmers for software development. An IDE normally consists of at least a source code editor, build automation tools and a debugger.
 
 Good examples of Python IDEs are:
-* PyCharm
+* JetBrains [PyCharm](https://www.jetbrains.com/pycharm/learn/)
+
+## 3.2 Tracking code changes
+Version control, also known as source control, is the practice of tracking and managing changes to software code. Version control systems are software tools that help software teams manage changes to source code over time. 
+
+See more here:
+* https://www.atlassian.com/git/tutorials/what-is-version-control
+
+### Git
+There are many version control systems. Git is the most popular one. 
+
+Git makes it easy to save successive versions of a project. It is possible to use it locally on the computer and to connect to a remote repository to share files with other developers.
+
+Remote repositories are online platforms where one can store not only current files, but also the full history of changes to a project.
+
+See more here:
+* https://rogerdudler.github.io/git-guide/
+
+#### Git configuration
+Basic Git configuration
+Before getting started, we will need to configure a few parameters in Git. We only need to perform these operations once and they will work for all future projects.
+
+First, we will save our username and email. This is needed because every saved version (called commit in Git) will be signed - so that in teamwork you know who the author of a change is. If we don't do this, when we try to save a commit, Git will respond with the message "Please tell me who you are".
+
+It will only take a moment to set up your user details:
+
+* Open a terminal (you don't need to care what directory the terminal is currently pointing to, as we will be defining Git's global settings).
+* Type the following command, specifying your name instead of the example:
+```
+git config --global user.name "Jan Kowalski"
+```
+* Then type another command, with your email address of course: 
+```
+git config --global user.email "jan.kowalski@example.com"
+```
+* You can check all global Git settings with the followwing command: 
+```
+git config --global -l
+```
