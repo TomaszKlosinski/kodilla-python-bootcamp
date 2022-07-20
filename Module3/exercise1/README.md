@@ -1,4 +1,5 @@
-"""Exercise 1:
+# Exercise 1
+
 Suppose we have grocery shopping to do, we need to go to the bakery where we buy bread, rolls and a doughnut.
 In addition, on the way we will also stop by the grocery shop, where we will buy carrots, celery and arugula.
 
@@ -14,21 +15,3 @@ Your program should display the following information:
     I go to the Bakery and I buy the following items here: ['Bread', 'Doughnut', 'Bread rolls'].
     I go to the Grocery Shop, and I buy the following items here: ['Carrots', 'Celery', 'Arugula'].
     In total, I buy 6 products.
-
-"""
-
-shopping_list = {
-    "bakery": ['bread', 'doughnut', 'bread rolls'],
-    "groceries": ['carrots', 'celery', 'rukola']
-}
-
-print("Shopping list")
-
-total_number_of_items = 0
-for shop, items in shopping_list.items():
-    capitalized_items = [x.capitalize() for x in items]
-    print(f"I go to the {shop.capitalize() } and I buy the following items here: {capitalized_items}.")
-
-    total_number_of_items = total_number_of_items + len(items)
-
-print(f"In total, I buy {total_number_of_items} products.")
