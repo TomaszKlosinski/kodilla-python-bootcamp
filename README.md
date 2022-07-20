@@ -1,2 +1,2 @@
-# kodilla-python-bootcamp
-Notes &amp; exercies from Kodilla Python Bootcamp
+# Kodilla Python Bootcamp
+Notes &amp; exercies from Kodilla Python Bootcamp.
