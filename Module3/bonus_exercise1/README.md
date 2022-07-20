@@ -1,0 +1,13 @@
+# Bonus Exercise 1
+
+## Znajdź średnią zmodyfikowanej listy
+
+Twoim zadaniem jest zmodyfikowanie listy przypisanej do zmiennej `numbers` w taki sposób, aby każdy jej element zaokrąglić do pełnej dziesiątki. Postaraj się nie tworzyć nowej listy będącej zmodyfikowaną listą `numbers`, lecz zmodyfikować listę `numbers`.
+
+Po zaokrągleniu każdego elementu listy `numbers`, pozbądź się jej największego oraz najmniejszego elementu, a następnie do zmiennej `mean_number` przypisz średnią z ostatecznie zmodyfikowanej listy.
+
+**Podsumowując:**
+
+1. zaokrąglij każdy element numbers do pełnej 10 (np. 5 -> 10, 32 -> 30)
+2. znajdź, a następnie pozbądź się największego oraz najmniejszego elementu zmodyfikowanej listy
+3. policz średnią z ostatecznie zmodyfikowanej listy `numbers` i przypisz ją do zmiennej `mean_number`
