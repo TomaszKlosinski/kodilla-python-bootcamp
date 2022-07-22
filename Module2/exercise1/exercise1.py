@@ -1,13 +1,63 @@
-sery = {
-    "roquefort": "12,50",
-    "stilton": "11,24",
-    "brie": "9,30",
-    "gouda": "8,55",
-    "edam": "11",
-    "parmezan": "16,50",
-    "mozzarella": "14",
-    "czechosłowacki ser z owczego mleka": "122,32"
-}
+# Zadanie 1
 
-for ser, cena in sery.items():
-    print(f"Ser {ser} kosztuje {cena} zł")
+name_list = ['John', 'Michael', 'Terry', 'Eric', 'Graham']
+
+name_dict = {}
+
+for name in name_list:
+    name_dict[name] = len(name)
+
+print(name_dict)
+
+
+# Zadanie 2
+
+def is_prime(number):
+    if number < 2:
+        return False
+
+    for i in range(2, number):
+        if number % i == 0:
+            return False
+
+    return True
+
+
+numbers = [1, 2, 3, 5, 6, 11, 12, 18, 19, 21]
+prime_numbers = []
+
+for number in numbers:
+    if is_prime(number):
+        prime_numbers.append(number)
+
+print(prime_numbers)
+
+
+# Zadanie 3
+
+week_days = ['pon','śro','pią','sob']
+week_days.insert(1, 'wto')
+week_days.insert(4, 'czw')
+week_days.insert(6, 'nie')
+
+print(week_days)
+
+
+# Zadanie 4
+
+actions_list = ["włącz czajnik",
+                "znajdź opakowanie herbaty",
+                "zalej herbatę",
+                "nalej wody do czajnika",
+                "wyjmij kubek",
+                "włóż herbatę do kubka" ]
+orderd_actions_list = []
+
+orderd_actions_list.append(actions_list[3])
+orderd_actions_list.append(actions_list[0])
+orderd_actions_list.append(actions_list[4])
+orderd_actions_list.append(actions_list[1])
+orderd_actions_list.append(actions_list[5])
+orderd_actions_list.append(actions_list[2])
+
+print(orderd_actions_list)

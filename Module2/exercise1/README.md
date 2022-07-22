@@ -1,7 +1,25 @@
-Szef organizuje przyjęcie dla klientów i wysłał Cię do sklepu z serami. Wiadomo jak to jest z tego typu instytucjami [*], czasami półki świecą pustkami, ale powiedzmy, że po długich poszukiwaniach udało Ci się znaleźć dobrze wyposażony i kupić wszystko, co potrzeba (oprócz mocno przechodzonego camemberta).
+Zadanie 1
+Mamy zadaną listę z imionami: John, Michael, Terry, Eric, Graham. Zamodeluj to w Pythonie, czyli stwórz listę o nazwie name_list. Zbuduj także słownik (name_dictionary), w którym dla każdego imienia przypisz liczbę znaków, które na nie przypadają. Np. „John” to 4 znaki.
 
-Nie bojąc się stringów ani ich formatowania, skorzystaj z dotychczasowej wiedzy i stwórz raport. Zaskocz swojego szefa rzeczową listą zakupów wraz z cenami.
 
-W Twoim koszyku znalazł się kilogram każdego z tych serów: roquefort (12,50 zł), stilton (11,24 zł), brie (9,30 zł), gouda (8,55 zł), edam (11 zł), parmezan (16,50 zł), mozzarella (14 zł) oraz hit – czechosłowacki ser z owczego mleka (122,32 zł).
+Zadanie 2
+Masz listę liczb [1, 2, 3, 5, 6, 11, 12, 18, 19, 21].
 
-Stwórz odpowiednie zmienne, zarówno dla produktów, jak i cen. Umieść wszystko w jednym tekście i użyj odpowiedniego formatowania. Pamiętaj, że ceny w Polsce zwykło się podawać z dwoma miejscami dziesiętnymi po przecinku (w Pythonie, zgodnie z anglosaską tradycją, używamy kropki zamiast przecinka, więc w kodzie napiszemy 2.49, a nie 2,49).
+Stwórz nową listę i ją wydrukuj. Nowa lista powinna zawierać tylko liczby pierwsze z poprzedniej listy.
+
+Zadanie 3
+Oto lista dni tygodnia: ['pon','śro','pią','sob'].
+
+Brakuje tu kilku. Uzupełnij i wydrukuj całość. Ciekawe co będzie trudniejsze – dojście, których dni brakuje, czy użycie odpowiedniej funkcji.
+
+
+Zadanie 4
+Oto sekwencja kroków do zrobienia herbaty.
+
+włącz czajnik
+znajdź opakowanie herbaty
+zalej herbatę
+nalej wody do czajnika
+wyjmij kubek
+włóż herbatę do kubka
+Kosmita nie wie jak, się robi herbatę... Stwórz sekwencję zgodnie z kolejnością nieposortowaną. Następnie poprzestawiaj elementy sekwencji tak, żeby kosmita mógł zrobić sobie herbatę.

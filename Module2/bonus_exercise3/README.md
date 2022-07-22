@@ -1,12 +1,13 @@
-# Znajdź pierwszych 30 liczb podzielnych bez reszty przez 6
+Stwórz listę zawierającą kolejne elementy ciągu Fibonacciego
 
-Wykorzystując pętlę `while` zwróć w konsoli wyłącznie pierwszych 30 liczb, które możemy bez reszty podzielić przez 6.
+Ciąg Fibonacciego to sekwencja, w której każda kolejna liczba jest sumą dwóch poprzednich liczb.
 
-Wynik widoczny w konsoli powinien zaczynać się następująco:
+Na przykład:
 
 ```
-6
-12
-18
-...
+1,1,2,3,5,8,13...
 ```
+
+Napisz program, który zwraca listę kolejnych 30 elementów ciągu Fibonacciego.
+
+Listę zawierającą kolejne elementy ciągu przypisz do zmiennej `fibonacci`

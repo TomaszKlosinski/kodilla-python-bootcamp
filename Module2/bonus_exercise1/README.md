@@ -1,14 +1,16 @@
-# Znajdź liczbę poszczególnych samogłosek
+#  Zidentyfikuj najlepszych i najgorszych uczniów
 
-Do zmiennej `text` przypisano kultowy fragment z filmu "Żywot Briana" autorstwa ekipy Monty Pythona.
+Uczniowie klasy 1A pisali niedawno egzamin z języka angielskiego. Wyniki każdego z uczniów zostały umieszczone w słowniku przypisanym do zmiennej `exam_points`. Pomóż nauczycielowi w przygotowaniu listy uczniów, którzy:
 
-Wykorzystując utworzone zmienne:
+- Nie zdali egzaminu. Są to wszyscy uczniowie z oceną niedostateczny. Przypisz ich do zmiennej `failed_students`
+- Zdali egzamin śpiewająco! Są to wszyscy uczniowie z oceną 'bardzo dobry'. Przypisz ich do zmiennej `top_students`
 
-- `number_of_a`
-- `number_of_e`
-- `number_of_i`
-- `number_of_o`
-- `number_of_u`
-- `number_of_y`
+Nauczyciel chciałby też znać imię najlepszego ucznia oraz liczbę punktów, jaką uzyskał podczas egzaminu. Zapisz tę informację w postaci krotki, której pierwszą wartością będzie imię ucznia, a drugą wartością będzie liczba punktów. Przypisz tę krotkę do zmiennej `best_student`.
 
-Policz ile poszczególnych samogłosek możemy znaleźć w cytacie przypisanym do zmiennej `text`.
+Skala ocen z egzaminu:
+
+- 0 - 45 niedostateczny
+- 46 - 60 dopuszczający
+- 61 - 75 dostateczny
+- 76 - 90 dobry
+- 91 - 100 bardzo dobry

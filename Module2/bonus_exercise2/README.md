@@ -1,14 +1,15 @@
-# Stwórz pętlę, która wydrukuje w konsoli liczby kolejno od 10 do 1
+# Stwórz słownik imion
 
-Oczekiwany wynik w konsoli:
+Do zmiennej `names` została przypisana lista imion męskich.
 
-10
-9
-8
-7
-6
-5
-4
-3
-2
-1
+Stwórz słownik, którego kluczami będą pierwsze litery imion w liście `names`, a wartościami będą wszystkie imiona, które zaczynają się na daną literę.
+
+Słownik przypisz do zmiennej `name_dict`.
+
+Na przykład:
+
+`name_dict['P']` powinien zwracać imiona: `Paweł, Piotr`
+
+# Podpowiedź
+
+Miej na uwadze, że imiona w słowniku nie powinny się powtarzać!

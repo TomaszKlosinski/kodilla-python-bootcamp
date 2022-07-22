@@ -1,13 +1,8 @@
-Mimo wielkich starań z Twojej strony szef nie był do końca zadowolony z przedstawionego raportu na temat serowych sprawunków. Zabrakło w nim kilku bardzo ważnych elementów, a przede wszystkim sumy wydatków.
+Zadanie 1
+Użyj listy składanej, aby stworzyć listę sześcianów (potęgi trzeciej) liczb z zakresu od 1 do 10. Następnie użyj pętli for in, aby zwrócić w konsoli liczby niepodzielne przez 2.
 
-Ponadto po wstępnej degustacji, szef nakazał dokupienie większej ilości sera. Obecnie masz 2 kg roqueforta, 3,5 kg parmezanu, 130 dag mozzarelli, 220 dag sera owczego, oraz po kilogramie pozostałych.
+Zadanie 2
+Dana jest lista: [2, 0, 0, 0, 1, 0, 0, 0, 0, 0, 2, 3, 0, 0]. Zadeklaruj ją w Pythonie, a następnie użyj slicingu, by otrzymać listę, która zawiera tylko zera z tej kolekcji. Potem użyj tej samej techniki do zwrócenia listy, która zawiera wszystkie inne liczby tylko nie zera z tej kolekcji.
 
-Po takiej uczcie, goście z pewnością docenią także deser – listek miętowy (200 g za 20 zł) [*] – link tylko dla ludzi o mocnych nerwach.
+Możesz wykonać to w kilku krokach (stworzenie kilku list pośrednich), jak i w jednym.
 
-Stwórz nowy plik w repl.it, wklej do niego kod z poprzedniego zadania, a następnie zmodyfikuj program, by uwzględnić nową ilość produktów. Stwórz odpowiednie obliczenia w tekście, a na koniec przedstaw raport w takiej postaci:
-
-Raport z zakupów:
-Produkt, masa w kg, cena
-Produkt, masa w kg, cena
-...
-Suma zł:

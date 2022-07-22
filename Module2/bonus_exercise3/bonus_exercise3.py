@@ -1,7 +1,8 @@
-i = 1
-number_of_results = 0
-while number_of_results < 30:
-    if i % 6 == 0:
-        print(i)
-        number_of_results = number_of_results + 1
-    i = i + 1
+num = 30
+fibonacci = []
+
+fibonacci.append(1)
+for i in range(1,num):
+    print(fibonacci[i], fibonacci[i-1])
+    next_fib = fibonacci[i] + fibonacci[i-1]
+    fibonacci.append(next_fib)
