@@ -1,88 +1,43 @@
-Twojemu szefowi udało się znaleźć informacje o najlepiej sprzedających się modelach samochodów w 2018 roku. Dane, które zdobył nie nadają się niestety do analizy, dlatego poprosił Cię o przetworzenie, aby można było z nich w prosty sposób wyciągać informacje.
+# Bonus exercise 3:
 
-Do zmiennej `models` przypisano listę zawierającą najlepiej sprzedające się samochody 2018 roku uszeregowane od najlepiej sprzedającego się w formacie 'producent - model'.
+A list containing the best-selling cars of 2018 ranked from best-seller in `'manufacturer - model'` format was assigned to the `models` variable.
 
-Do zmiennych `sales2018`, `sales2017` oraz `sales2016` przypisano liczbę sprzedanych egzemplarzy tych modeli kolejno w roku 2018, 2017 oraz 2016.
+The variables `sales2018`, `sales2017` and `sales2016` were assigned the number of units sold of these models in 2018, 2017 and 2016 respectively.
 
-Czyli - najlepiej sprzedającym się modelem samochodu w 2018 roku był: Volkswagen Golf (pierwsza pozycja na liście `models`). Golf w 2018 roku sprzedał się w ilości 445 754 egzemplarzy (pierwsza pozycja na liście `sales2018`). Wiemy też, że w 2017 roku sprzedano 483 105 modeli Golfa (pierwsza pozycja na liście `sales2017`), oraz że w 2016 roku sprzedano 492 952 egzemplarzy Golfa (pierwsza pozycja na liście `sales2016`).
+That is - the best-selling car model in 2018 was: Volkswagen Golf (first position on the `models` list). The Golf sold 445,754 units in 2018 (first position on the `sales2018` list). We also know that 483,105 Golf models were sold in 2017 (first position on the `sales2017` list), and that 492,952 Golfs were sold in 2016 (first position on the `sales2016` list).
 
-Niektóre samochody nie były sprzedawane przed 2018 rokiem. W takim przypadku dane o ich sprzedaży zastąpione są wartością 'NA'. Zastąp wszystkie 'NA' cyfrą 0.
+Some cars were not sold before 2018. In this case, their sales figures are replaced by 'NA'. Replace all 'NA' with 0.
 
-Na podstawie otrzymanych danych zbuduj słownik o następującej strukturze i **przypisz go do zmiennej `cars`**:
+Build a dictionary with the following structure from the resulting data and **assign it to the `cars`** variable:
 
-```
-cars = {"brand": {"model1":{"sales":{"2016": 123,
-```
-
-```
+```python
+cars = {"brand1": {"model1":{"sales":{"2016": 123,
                                      "2017": 456,
-```
-
-```
                                      "2018": 789}},
-```
-
-```
                   "model2":{"sales":{"2016": 987,
-```
-
-```
                                      "2017": 654,
-```
-
-```
                                      "2018": 321}}
-```
-
-```
-                 },
-```
-
-```
         "brand2": ... }
 ```
 
-Czyli na przykładzie rzeczywistych danych powinien wyglądać on następująco:
+That is, using the real data example, it should look like the following:
 
-```
-cars = {"Opel": {"Corsa":{"sales":{"2016": 264844,
-```
-
-```
+```python
+cars = { "Opel": {"Corsa":{"sales":{"2016": 264844,
                                    "2017": 232738,
-```
-
-```
                                    "2018": 217036}},
-```
-
-```
                  "Astra":{"sales":{"2016": 253483,
-```
-
-```
                                    "2017": 217813,
-```
-
-```
                                    "2018": 160275}}
-```
-
-```
-                 },
-```
-
-```
         "Dacia": ... }
 ```
 
-Następnie postaraj się odpowiedzieć na pytania zaprezentowane poniżej:
+Then try to answer the questions presented below:
 
-1. Który model samochodu z listy najlepiej sprzedawał się w 2017 roku? Odpowiedź przypisz do zmiennej `answer1`.
-2. Który producent z listy sprzedał najwięcej egzemplarzy samochodów w 2018 roku? Odpowiedź przypisz do zmiennej `answer2`.
-3. Ile modeli samochodów z listy nie sprzedawało się w 2016 roku, a do sprzedaży weszło w roku 2017? Odpowiedź przypisz do zmiennej `answer3`.
-4. Który z model samochodu z listy ma najmniej sprzedanych egzemplarzy, jeśli weźmiemy pod uwagę lata 2016, 2017 oraz 2018. Odpowiedź przypisz do zmiennej `answer4`.
-5. O ile procent wzrosła sprzedaż modeli Forda w 2018 roku w stosunku do roku 2017? Odpowiedź przypisz do zmiennej `answer5`. Odpowiedź podaj w formacie procentowym jako string. Np. '21%'.
+1. which car model from the list sold best in 2017? Assign the answer to the variable `answer1`.
+2. Which manufacturer from the list sold the most units of cars in 2018? Assign the answer to the variable `answer2`.
+3. How many models of cars from the list did not sell in 2016 and went on sale in 2017? Assign the answer to the variable `answer3`.
+4. Which of the car models in the list has the fewest sales if we consider the years 2016, 2017 and 2018. Assign the answer to the variable `answer4`.
+5. By how much did sales of Ford models increase in 2018 compared to 2017? Assign the answer to the variable `answer5`. Give the answer in percentage format as a string. E.g. '21%'.
 
-# UWAGA! Na potrzeby zadania potraktuj 'VW' i 'Volkswagen' jako osobnych producentów
-
+NOTE: For the purposes of the task, treat 'VW' and 'Volkswagen' as separate manufacturers.

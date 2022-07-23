@@ -1,13 +1,13 @@
 # Bonus Exercise 1
 
-## Znajdź średnią zmodyfikowanej listy
+## Find the average of the modified list
 
-Twoim zadaniem jest zmodyfikowanie listy przypisanej do zmiennej `numbers` w taki sposób, aby każdy jej element zaokrąglić do pełnej dziesiątki. Postaraj się nie tworzyć nowej listy będącej zmodyfikowaną listą `numbers`, lecz zmodyfikować listę `numbers`.
+Your task is to modify the list assigned to the `numbers` variable in such a way that each element of the list is rounded to the nearest ten. Try not to create a new list that is a modified `numbers` list, but modify the `numbers` list instead.
 
-Po zaokrągleniu każdego elementu listy `numbers`, pozbądź się jej największego oraz najmniejszego elementu, a następnie do zmiennej `mean_number` przypisz średnią z ostatecznie zmodyfikowanej listy.
+After rounding each element of the `numbers` list, get rid of its largest and smallest element, and then assign the average of the final modified list to the `mean_number` variable.
 
-**Podsumowując:**
+**Summary:**.
 
-1. zaokrąglij każdy element numbers do pełnej 10 (np. 5 -> 10, 32 -> 30)
-2. znajdź, a następnie pozbądź się największego oraz najmniejszego elementu zmodyfikowanej listy
-3. policz średnią z ostatecznie zmodyfikowanej listy `numbers` i przypisz ją do zmiennej `mean_number`
+1. round each element of the numbers to the full 10 (e.g. 5 -> 10, 32 -> 30)
+2. find and then discard the largest and smallest element of the modified list
+3. count the average of the final modified list of `numbers` and assign it to the `mean_number` variable

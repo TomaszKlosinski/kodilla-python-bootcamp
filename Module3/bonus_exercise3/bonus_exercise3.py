@@ -18,10 +18,118 @@ sales2016 = ['492,952','315,115','308,561','300,528','234,340','249,047','180,19
              '230,255','193,969','264,844','170,300','217,105','134,560','NA','214,435',
              '183,730','NA','NA','177,301','191,617','253,483','208,575','NA','195,653','NA']
 
-answer1 = "" # wskaż nazwę modelu jako string
-answer2 = "" # wskaż producenta jako string
-answer3 = [] # wskaż odpowiedź jako listę zawierającą wszystkie modele spełniające kryteria
-answer4 = "" # wskaż nazwę modelu jako string
-answer5 = "" # odpowiedź podaj w formacie procentowym jako string. Np. '21%'
-
 cars = {}
+
+
+for index, car in enumerate(models):
+    brand, model = car.split(' - ')
+
+    cars.update({brand: {}})
+
+for index, car in enumerate(models):
+    brand, model = car.split(' - ')
+
+    cars[brand] = cars[brand] | {model: {}}
+
+for index, car in enumerate(models):
+    brand, model = car.split(' - ')
+
+    cars[brand][model] = {
+        "sales": {
+            "2016": sales2016[index].replace(',', ''),
+            "2017": sales2017[index].replace(',', ''),
+            "2018": sales2018[index].replace(',', '')
+        }
+    }
+
+print("Cars Dictionary:")
+print(cars)
+print("")
+
+
+# Question 1: Which car model on the list had best sales in 2017?
+
+top_model_2017 = {"car": "", "sales": 0}
+for brand in cars.keys():
+    for model in cars[brand].keys():
+        model_sales2017 = cars[brand][model]["sales"]["2017"]
+        if model_sales2017 != "NA":
+            if top_model_2017["sales"] < int(model_sales2017):
+                top_model_2017 = {"car": f"{brand} {model}", "sales": int(model_sales2017)}
+
+answer1 = top_model_2017
+print(f"answer1: {answer1}")
+
+
+# Question 2: Which manufacturer on the list sold the most cars in 2018?
+
+manufacturers_total_sales_2018 = {car.split(' - ')[0]: 0 for car in models}
+for brand in cars.keys():
+    for model in cars[brand].keys():
+        model_sales2018 = cars[brand][model]["sales"]["2018"]
+        if model_sales2018 != "NA":
+            manufacturers_total_sales_2018[brand] = manufacturers_total_sales_2018[brand] + int(model_sales2018)
+
+top_manufacturer_2018 = max(manufacturers_total_sales_2018, key=manufacturers_total_sales_2018.get)
+
+answer2 = f"{top_manufacturer_2018} - total sales: {manufacturers_total_sales_2018[top_manufacturer_2018]}"
+print(f"answer2: {answer2}")
+
+
+# Question 3: How many models of cars on the list did not sell in 2016 and went on sale in 2017?
+
+car_models_on_sale_2017 = []
+for brand in cars.keys():
+    for model in cars[brand].keys():
+        model_sales2016 = cars[brand][model]["sales"]["2016"]
+        model_sales2017 = cars[brand][model]["sales"]["2017"]
+        if model_sales2016 == "NA" and model_sales2017 != "NA":
+            car_models_on_sale_2017.append(f"{brand} - {model}")
+
+answer3 = car_models_on_sale_2017
+print(f"answer3: {answer3}")
+
+
+# Question 4: Which of the car models in the list has the fewest sales if we consider 2016, 2017 and 2018.
+
+car_sales2016 = 0
+car_sales2017 = 0
+car_sales2018 = 0
+
+cars_total_sales = {car: 0 for car in models}
+for brand in cars.keys():
+    for model in cars[brand].keys():
+        car = f"{brand} - {model}"
+        if cars[brand][model]["sales"]["2016"] != "NA":
+            car_sales2016 = int(cars[brand][model]["sales"]["2016"])
+        if cars[brand][model]["sales"]["2017"] != "NA":
+            car_sales2017 = int(cars[brand][model]["sales"]["2017"])
+        if cars[brand][model]["sales"]["2018"] != "NA":
+            car_sales2018 = int(cars[brand][model]["sales"]["2018"])
+
+        total_sales = car_sales2016 + car_sales2017 + car_sales2018
+        cars_total_sales[car] = total_sales
+
+car_least_total_sales = min(cars_total_sales, key=cars_total_sales.get)
+
+answer4 = f"{car_least_total_sales} - total sales: {cars_total_sales[car_least_total_sales]}"
+print(f"answer4: {answer4}")
+
+
+# Question 5: By how much did sales of Ford models increase in 2018 compared to 2017 (in percentage)?
+
+ford_cars_sales_2017 = 0
+ford_cars_sales_2018 = 0
+for brand in cars.keys():
+    if brand == "Ford":
+        for model in cars[brand].keys():
+            model_sales2017 = cars[brand][model]["sales"]["2017"]
+            model_sales2018 = cars[brand][model]["sales"]["2018"]
+            if model_sales2017 != "NA":
+                ford_cars_sales_2017 += int(model_sales2017)
+            if model_sales2018 != "NA":
+                ford_cars_sales_2018 += int(model_sales2018)
+
+sales_increase_2018 = (ford_cars_sales_2018 / ford_cars_sales_2017 - 1)
+answer5 = "{0:.0%}".format(sales_increase_2018)
+print(f"answer5: {answer5}")

@@ -1,19 +1,18 @@
-# Stwórz funkcję, która sprawdza, czy możemy zbudować most
+# Bonus Exercise 2
 
-Naszym zadaniem jest zbudowanie mostu pomiędzy punktem A i punktem B.
+## Function that checks if we can build a bridge
 
-Do dyspozycji mamy **płytę** oraz **łącznik**, które mają określone długości.
+Our task is to build a bridge between point A and point B.
 
-Płyt nie możemy dzielić na mniejsze części, ustawiamy je jedna obok drugiej. Płyty muszą być połączone ze sobą za pomocą łącznika. Łącznik stanowi połowę długości płyty.
+We are given a **chunk** and a **junction**, both of which have specific lengths.
 
-Stwórz funkcję `build_bridge`, która będzie zwracać wartość `True`, jeśli mając płytę o długości danej zmienną `chunk` jesteśmy w stanie zbudować most o długości danej zmienną `goal`.
+The chunks cannot be divided into smaller pieces, we place them side by side. The chunks must be connected to each other using a junction. The junction is half the length of the plate.
 
-Niech funkcja `build_bridge` zwraca wartość `False`, jeśli zbudowanie mostu przy założeniu zmiennych `chunk` oraz `goal` nie jest możliwe.
+Create a function `build_bridge()` that will return `True` if, given the length of `chunk`, we are able to build a bridge of length given by the variable `goal`.
 
-Na przykład:
+Let the function `build_bridge()` return the value `False` if building a bridge given the variables `chunk` and `goal` is not possible.
 
-Jeśli `goal` to 20, a `chunk` to 2 - wtedy możemy użyć 7 płyt i 6 łączników. Możemy zbudować most, a funkcja powinna zwracać wartość `True`.
+For example:
 
-Z drugiej strony, jeśli `goal` to 18, a `chunk` to 2 - wtedy NIE możemy zbudować mostu, a funkcja powinna zwracać wartość `False`.
-
-
+* If `goal` is 20 and `chunk` is 2 - then we can use 7 plates and 6 connectors. We can build a bridge, and the function should return the value `True`.
+* On the other hand, if `goal` is 18 and `chunk` is 2 - then we can NOT build a bridge, and the function should return the value `False`.
