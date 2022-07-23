@@ -1,23 +1,23 @@
-# Rzuty kostką
+# Throwing the dice
 
-Gramy w grę polegającą na rzucaniu typową sześcienną kostką.
+We play a game of throwing a typical cubic dice.
 
-W każdej kolejce gracz dwukrotnie rzuca kością. Po dwukrotnym rzuceniu kością wynikiem gracza jest suma wyrzuconych oczek z rzutu numer 1 oraz rzutu numer 2.
+Each turn a player throws the dice twice. After the dice have been thrown twice, the player's score is the sum of the dots thrown from throw number 1 and throw number 2.
 
-Napisz program, który do słownika `dict` przypisuje pary `key` i `value`, gdzie:
+Write a program that assigns pairs `key` and `value` to the `dict` dictionary, where:
 
-- `key` - to możliwy do uzyskania wynik w jednej kolejce (suma oczek w dwóch rzutach)
-- value - to wszystkie kombinacje rzutów, które składają się na dany `key`
+- `key` - is the possible result in one queue (the sum of the meshes in two throws)
+- value - is all combinations of throws that make up a given `key`.
 
-Wszystkie możliwe kombinacje do uzyskania danego wyniku przechowuj jako zbiór, w którym każdy kolejny element to `krotka`, której pierwsza wartość to rezultat pierwszego rzutu, a druga wartość to rezultat drugiego rzutu.
+Store all possible combinations to get a given result as a set, where each successive element is a `key`, whose first value is the result of the first throw, and whose second value is the result of the second throw.
 
-Na przykład wywołując:
+For example, by calling:
 
 ```
 dice[7]
 ```
 
-Wynik powinien zawierać następujące elementy:
+The result should contain the following elements:
 
 ```
 {(1, 6), (2, 5), (3, 4), (4, 3), (5, 2), (6, 1)}
