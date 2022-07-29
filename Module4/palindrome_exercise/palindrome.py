@@ -1,5 +1,5 @@
 def is_palindrome(text: str) -> bool:
-    '''Fundtions checks if a string is a palindrome'''
+    '''Function checks if a string is a palindrome'''
 
     if len(text) == 1:
         return False

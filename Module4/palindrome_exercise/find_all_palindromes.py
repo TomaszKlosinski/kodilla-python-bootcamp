@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+'''Program to fetch all palindromes in English and Polish'''
 
 from urllib.request import urlopen
 from palindrome import is_palindrome
