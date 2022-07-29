@@ -391,29 +391,12 @@ The remainder for such a division is 1, because 28 is 3 times 9 and 1 remainder.
 
 
 #### Order of operations
-Already at school, we learn about the fact that more complex operations have a certain hierarchy. There is a conventional order in which calculations are called up. This is of course also reflected in Python.
+The order in which operations are performed in Python:
 
-What comes after what?
-We know that you know. Just a reminder of the order in which actions are performed:
-
-* Actions in brackets.
-* Multiplication and square rooting.
-* Multiplication and division (in order of appearance, i.e. from left to right).
-* Addition and subtraction (in order of appearance, i.e. from left to right).
-
-So which result is obtained in this expression, 3 or 4?
-
-print(2 + 4 / 2)
-
-Obviously 4. Python is flawless, according to the established mathematical order we must first multiply and divide, and only then add and subtract.
-
-In Python, it is of course possible to adjust this order by using parentheses.
-
-Let's modify the code slightly. Which result do you think we get with this notation, 3 or 4?
-
-print((2 + 4) / 2)
-
-This time it's 3, because we have explicitly instructed the interpreter that we intend to add first and then divide.
+* Operations in brackets
+* Multiplication and square rooting
+* Multiplication and division (in order of appearance, i.e. from left to right)
+* Addition and subtraction (in order of appearance, i.e. from left to right)
 
 
 ## 1.4 Loops
