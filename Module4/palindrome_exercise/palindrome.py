@@ -1,10 +1,10 @@
 def is_palindrome(text: str) -> bool:
     '''Fundtions checks if a string is a palindrome'''
 
-    last_index = len(text) - 1
-
     if len(text) == 1:
         return False
+
+    last_index = len(text) - 1
 
     for index, letter in enumerate(text):
         if letter != text[last_index - index]:
