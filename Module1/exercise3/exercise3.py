@@ -1,4 +1,4 @@
-print("Rysunek nr 1")
+print("Picture nr 1")
 for i in range(10):
     if i % 2 != 0:
         poczatek = ' '
@@ -9,7 +9,7 @@ for i in range(10):
 
 
 print("\n\n")
-print("Rysunek nr 2")
+print("Picture nr 2")
 for i in range(2, 8, 2):
     print('* ' * i)
     print('* ' * i)
@@ -17,6 +17,6 @@ for i in range(2, 8, 2):
 
 
 print("\n\n")
-print("Rysunek nr 3")
+print("Picture nr 3")
 for i in reversed(range(7)):
     print('*' * i)

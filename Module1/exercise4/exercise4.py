@@ -6,7 +6,7 @@ def check_available_cheese(available_cheese):
     elif 'gouda' in available_cheese:
         print("Gouda")
     else:
-        print("Nie ma sera")
+        print("Cheese is not available")
 
 
 available_cheese = ['edam', 'brie', 'gouda']

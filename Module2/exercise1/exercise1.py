@@ -1,4 +1,4 @@
-# Zadanie 1
+# Task 1
 
 name_list = ['John', 'Michael', 'Terry', 'Eric', 'Graham']
 
@@ -10,7 +10,7 @@ for name in name_list:
 print(name_dict)
 
 
-# Zadanie 2
+# Task 2
 
 def is_prime(number):
     if number < 2:
@@ -33,7 +33,7 @@ for number in numbers:
 print(prime_numbers)
 
 
-# Zadanie 3
+# Task 3
 
 week_days = ['pon','śro','pią','sob']
 week_days.insert(1, 'wto')
@@ -43,7 +43,7 @@ week_days.insert(6, 'nie')
 print(week_days)
 
 
-# Zadanie 4
+# Task 4
 
 actions_list = ["włącz czajnik",
                 "znajdź opakowanie herbaty",
