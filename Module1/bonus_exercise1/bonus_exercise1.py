@@ -25,16 +25,15 @@ def number_of_letters(letter, text):
     return number_of_letters
 
 
-
-number_of_a = number_of_letters('a', text)
+number_of_a = number_of_letters("a", text)
 print(f"Litera a: {number_of_a}")
-number_of_e = number_of_letters('e', text)
+number_of_e = number_of_letters("e", text)
 print(f"Litera e: {number_of_e}")
-number_of_i = number_of_letters('i', text)
+number_of_i = number_of_letters("i", text)
 print(f"Litera i: {number_of_i}")
-number_of_o = number_of_letters('o', text)
+number_of_o = number_of_letters("o", text)
 print(f"Litera o: {number_of_o}")
-number_of_u = number_of_letters('u', text)
+number_of_u = number_of_letters("u", text)
 print(f"Litera u: {number_of_u}")
-number_of_y = number_of_letters('y', text)
+number_of_y = number_of_letters("y", text)
 print(f"Litera y: {number_of_y}")

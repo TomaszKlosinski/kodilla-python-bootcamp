@@ -18,6 +18,5 @@ def build_bridge(chunk, goal):
     return result
 
 
-
 print(build_bridge(2, 20))
 print(build_bridge(2, 18))

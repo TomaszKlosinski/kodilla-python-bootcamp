@@ -6,7 +6,7 @@ cheeses = {
     "edam": "11",
     "parmezan": "16,50",
     "mozzarella": "14",
-    "Czechoslovakian": "122,32"
+    "Czechoslovakian": "122,32",
 }
 
 for cheese, price in cheeses.items():

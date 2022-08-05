@@ -1,24 +1,22 @@
 def check_available_cheese(available_cheese):
-    if 'edam' in available_cheese:
-        print('Edam')
-    elif 'brie' in available_cheese:
+    if "edam" in available_cheese:
+        print("Edam")
+    elif "brie" in available_cheese:
         print("Brie")
-    elif 'gouda' in available_cheese:
+    elif "gouda" in available_cheese:
         print("Gouda")
     else:
         print("Cheese is not available")
 
 
-available_cheese = ['edam', 'brie', 'gouda']
+available_cheese = ["edam", "brie", "gouda"]
 check_available_cheese(available_cheese)
 
-available_cheese = ['brie', 'gouda']
+available_cheese = ["brie", "gouda"]
 check_available_cheese(available_cheese)
 
-available_cheese = ['gouda']
+available_cheese = ["gouda"]
 check_available_cheese(available_cheese)
 
 available_cheese = []
 check_available_cheese(available_cheese)
-
-

@@ -1,7 +1,7 @@
 # Task 1
 
 print("Cubic roots non-dividable by 2:")
-cubic_roots = [x**3 for x in range(1,10)]
+cubic_roots = [x**3 for x in range(1, 10)]
 
 for num in cubic_roots:
     if num % 2 != 0:

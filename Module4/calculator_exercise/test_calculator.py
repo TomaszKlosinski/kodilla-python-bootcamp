@@ -3,7 +3,6 @@ from calculator import calculate
 
 
 class TestPalindrome(unittest.TestCase):
-
     def test_calculate_addition(self) -> None:
         self.assertEqual(calculate("1", "2", "2"), 4.0)
         self.assertEqual(calculate("1", "2.3", "2"), 4.3)
@@ -25,5 +24,5 @@ class TestPalindrome(unittest.TestCase):
         self.assertEqual(calculate("4", "6.5", "2.5"), 2.6)
 
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     unittest.main()

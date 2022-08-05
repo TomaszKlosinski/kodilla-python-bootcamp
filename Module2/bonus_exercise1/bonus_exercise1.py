@@ -1,22 +1,22 @@
 exam_points = {
-    "Mariusz":30,
-    "Mateusz":55,
-    "Marta":76,
-    "Roman":30,
-    "Arleta":59,
+    "Mariusz": 30,
+    "Mateusz": 55,
+    "Marta": 76,
+    "Roman": 30,
+    "Arleta": 59,
     "Adrian": 96,
-    "Monika":91,
-    "Andrzej":22,
-    "Krzysztof":83,
-    "Krystyna":93,
-    "Piotr":44,
-    "Dawid":10,
-    "Agnieszka":15
+    "Monika": 91,
+    "Andrzej": 22,
+    "Krzysztof": 83,
+    "Krystyna": 93,
+    "Piotr": 44,
+    "Dawid": 10,
+    "Agnieszka": 15,
 }
 
 failed_students = []
 top_students = []
-best_student = ("",0)
+best_student = ("", 0)
 
 for student, grade in exam_points.items():
     if grade < 61:
@@ -24,7 +24,10 @@ for student, grade in exam_points.items():
     if grade > 91:
         top_students.append(student)
 
-best_student_name = [ name for name, grade in exam_points.items() if grade == max(exam_points.values()) ][0]
+best_students = [
+    name for name, grade in exam_points.items() if grade == max(exam_points.values())
+]
+best_student_name = best_students[0]
 
 # Alternative:
 # best_student_name = max(exam_points, key=exam_points.get)

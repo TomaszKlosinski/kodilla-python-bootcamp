@@ -1,6 +1,6 @@
 # Task 1
 
-name_list = ['John', 'Michael', 'Terry', 'Eric', 'Graham']
+name_list = ["John", "Michael", "Terry", "Eric", "Graham"]
 
 name_dict = {}
 
@@ -11,6 +11,10 @@ print(name_dict)
 
 
 # Task 2
+
+numbers = [1, 2, 3, 5, 6, 11, 12, 18, 19, 21]
+prime_numbers = []
+
 
 def is_prime(number):
     if number < 2:
@@ -23,9 +27,6 @@ def is_prime(number):
     return True
 
 
-numbers = [1, 2, 3, 5, 6, 11, 12, 18, 19, 21]
-prime_numbers = []
-
 for number in numbers:
     if is_prime(number):
         prime_numbers.append(number)
@@ -35,22 +36,24 @@ print(prime_numbers)
 
 # Task 3
 
-week_days = ['pon','śro','pią','sob']
-week_days.insert(1, 'wto')
-week_days.insert(4, 'czw')
-week_days.insert(6, 'nie')
+week_days = ["pon", "śro", "pią", "sob"]
+week_days.insert(1, "wto")
+week_days.insert(4, "czw")
+week_days.insert(6, "nie")
 
 print(week_days)
 
 
 # Task 4
 
-actions_list = ["włącz czajnik",
-                "znajdź opakowanie herbaty",
-                "zalej herbatę",
-                "nalej wody do czajnika",
-                "wyjmij kubek",
-                "włóż herbatę do kubka" ]
+actions_list = [
+    "włącz czajnik",
+    "znajdź opakowanie herbaty",
+    "zalej herbatę",
+    "nalej wody do czajnika",
+    "wyjmij kubek",
+    "włóż herbatę do kubka",
+]
 orderd_actions_list = []
 
 orderd_actions_list.append(actions_list[3])
