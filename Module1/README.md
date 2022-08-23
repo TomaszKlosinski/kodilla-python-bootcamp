@@ -339,39 +339,38 @@ To fix this, we have to convert our variables from strings to integers:
 
 #### Subtraction
 
-Like addition of numbers, the reverse operation - subtraction - can also be performed. For this operation we use the minus operator:
+To perform subtraction we use the minus operator:
 ```python
 print(60-20)
 ```
 
-And here is a version with variables:
+We can also use variables:
 ```python
 bigger_number = 62
 smaller_number = 22
 print(bigger_number - smaller_number)
 ```
 
-Both examples will print the number 40 on our console.
-
 #### Multiplication
 
-Further operations that will be very useful are multiplication and raising to a power. Here, as in many other languages, the operator is an asterisk (*) and, in the case of multiplication, two asterisks stacked next to each other (**). So let's give Python a task and see what it returns:
+As in many other languages, the multiplication operator is an asterisk (`*`):
 ```python
 print(3 * 3)
 ```
 
-3 times 3 equals 9. That's the result! Great. And the multiplication? 
 
 #### Powers
 
-3 to the power of 3, that's 3 times 3 times 3. So 27. You can check that this is the result we actually got by performing this operation:
+Rising to power is done with `**`:
 ```python
 print(3 ** 3)
 ```
 
 #### Division
 
-The next basic operation is division. There is a bit of a challenge with this operation, as it can return a value and a remainder, or an exact value with a fraction (division with remainder and without remainder). Using the built-in operators in Python, we can easily get both results. Let's see the following examples:
+The next basic operation is division. 
+
+There are however two versions: it can return a value and a remainder with `/`, or without reminder (with `//`):
 ```python
 print(28 / 3)
 print(28 // 3)
@@ -381,13 +380,13 @@ print(28 // 3)
 
 #### Remainder
 
-In the first case we see a division without remainder, which results in a number with a decimal. The division in the next line is a division with remainder, which returns us an integer. Can we also get the remainder from such a division? Yes, but using a different operator.
+To get just a reminder of the division we use `%`
 ```python
 print(28 % 3)
 >> 1
 ```
 
-The remainder for such a division is 1, because 28 is 3 times 9 and 1 remainder. The operator that extracts such a value is precisely %.
+The remainder for such a division is 1 because 28 is 3 times 9 plus 1 as a remainder.
 
 
 #### Order of operations
@@ -400,6 +399,55 @@ The order in which operations are performed in Python:
 
 
 ## 1.4 Loops
+Python has two basic loops:
+- for loop
+- while loop
+
+### For loop
+
+The `for` keyword is used to create a loop in Python:
+
+```python
+for i in range(100):
+    print("Hello")
+```
+
+A loop exists if and only if we have some repetition. In the example above, the loop will execute 100 times because that's how much we've written into the `range()` function.
+
+We can also print an index of each iteration of the loop:
+```python
+for i in range(10):
+    print(i)
+```
+
+This will result in:
+```python
+0
+1
+2
+3
+4
+5
+6
+7
+8
+9
+```
+
+To sum up: A loop consists of a `for` keyword, a variable (in this case `i`), an `in` word, a `range`/`collection` and a loop body/block.
+```python
+for i in range(1, 11):  # keyword, variable and range
+    print(i)  # loop block
+
+```
+
+The variable we've named `i` here can actually be named anything (subject to the variable naming rules, of course). When we do iterations on a numeric collection, you will most often encounter a short, one-character name, often just `i`.
+
+Each time this loop executes, the variable `i` takes on another value from the specified range/collection. So, when the loop executes for the first time, then `i` is equal to 1. On the second execution, `i` has a value of 2, and so on. Successive executions of the loop are called **iterations**.
+
+In the second line we have the body of the loop. As you remember - it must be created with indentation (4 spaces). This block is the commands, the sentences to be executed after each iteration. So in this case, we will be printing the variable `i`, which each time takes the value of the next number in the range.
+
+The loop will terminate when the given range of numbers is exhausted.
 
 ### Nested loops
 
