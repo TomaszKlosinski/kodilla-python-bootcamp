@@ -18,7 +18,7 @@ business_contact = BusinessContact(
     company_phone="+41 321 321 321",
 )
 
-class TestPalindrome(unittest.TestCase):
+class TestContacts(unittest.TestCase):
     def test_base_contact(self) -> None:
         self.assertEqual(contact.first_name, "Tomasz")
         self.assertEqual(contact.last_name, "Klosinski")
