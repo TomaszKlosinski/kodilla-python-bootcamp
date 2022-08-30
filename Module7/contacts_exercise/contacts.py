@@ -1,5 +1,5 @@
 class BaseContact:
-    def __init__(self, first_name, last_name, private_phone, email_address):
+    def __init__(self, first_name: str, last_name: str, private_phone: str, email_address: str):
         self.first_name = first_name
         self.last_name = last_name
         self.private_phone = private_phone
@@ -15,7 +15,7 @@ class BaseContact:
 
 
 class BusinessContact(BaseContact):
-    def __init__(self, position, company, company_phone, *args, **kwargs):
+    def __init__(self, position: str, company: str, company_phone: str, *args, **kwargs):
         super().__init__(*args, **kwargs)
         self.position = position
         self.company = company
