@@ -1,12 +1,28 @@
 import unittest
 from library import Movie, MovieSeries, get_movies, get_series, search, generate_views, top_titles
 
+
+# Data used for tests
+
 movie = Movie(title="Pulp Fiction", release_date=1994, genre="Crime/Drama")
 
 movie_series = MovieSeries(title="The Simpsons", release_date=1989, genre="Sitcom",
                            seasons={1: [1, 2, 3, 4], 2: [1, 2, 3, 4]})
 
-films = [movie, movie_series]
+films_small_library = [movie, movie_series]
+
+films_big_library = [
+    Movie(title="Pulp Fiction", release_date=1994, genre="Crime/Drama"),
+    Movie(title="2001: A Space Odyssey", release_date=1968, genre="Science fiction"),
+    Movie(title="The Godfather", release_date=1972, genre="Thriller"),
+    Movie(title="La Dolce Vita", release_date=1960, genre="Drama/Comedy"),
+    MovieSeries(title="The Simpsons", release_date=1989, genre="Sitcom",
+                seasons={1: [1, 2, 3, 4], 2: [1, 2, 3, 4]}),
+    MovieSeries(title="Band of Brothers", release_date=2001, genre="War/Drama",
+                seasons={1: [1, 2], 2: [1, 2], 3: [1, 2]}),
+    MovieSeries(title="Game of Thrones", release_date=2011, genre="Fantasy/Drama",
+                seasons={1: [1, 2, 3], 2: [1, 2, 3]}),
+]
 
 
 class TestFilmsLibrary(unittest.TestCase):
@@ -41,46 +57,33 @@ class TestFilmsLibrary(unittest.TestCase):
                          ['S01E01', 'S01E02', 'S01E03', 'S01E04', 'S02E01', 'S02E02', 'S02E03', 'S02E04'])
 
     def test_get_movies_function(self) -> None:
-        self.assertEqual(get_movies(films), [movie])
+        self.assertEqual(get_movies(films_small_library), [movie])
 
     def test_get_series_function(self) -> None:
-        self.assertEqual(get_series(films), [movie_series])
+        self.assertEqual(get_series(films_small_library), [movie_series])
 
     def test_search_function(self) -> None:
-        self.assertEqual(search(films, "Pulp"), movie)
-        self.assertEqual(search(films, "Simp"), movie_series)
-        self.assertEqual(search(films, "Blah blah"), None)
+        self.assertEqual(search(films_small_library, "Pulp"), movie)
+        self.assertEqual(search(films_small_library, "Simp"), movie_series)
+        self.assertEqual(search(films_small_library, "Blah blah"), None)
 
     def test_generate_views(self) -> None:
         movie.plays_count = 0
         movie_series.plays_count = 0
-        generate_views(films)
+        generate_views(films_small_library)
         self.assertTrue(movie.plays_count != 0 or movie_series.plays_count != 0)
 
     def test_top_titles_function(self) -> None:
-        films = [
-            Movie(title="Pulp Fiction", release_date=1994, genre="Crime/Drama"),
-            Movie(title="2001: A Space Odyssey", release_date=1968, genre="Science fiction"),
-            Movie(title="The Godfather", release_date=1972, genre="Thriller"),
-            Movie(title="La Dolce Vita", release_date=1960, genre="Drama/Comedy"),
-            MovieSeries(title="The Simpsons", release_date=1989, genre="Sitcom",
-                        seasons={1: [1, 2, 3, 4], 2: [1, 2, 3, 4]}),
-            MovieSeries(title="Band of Brothers", release_date=2001, genre="War/Drama",
-                        seasons={1: [1, 2], 2: [1, 2], 3: [1, 2]}),
-            MovieSeries(title="Game of Thrones", release_date=2011, genre="Fantasy/Drama",
-                        seasons={1: [1, 2, 3], 2: [1, 2, 3]}),
-        ]
-
         for _ in range(30):
-            films[0].play()
+            films_big_library[0].play()
         for _ in range(20):
-            films[1].play()
+            films_big_library[1].play()
         for _ in range(10):
-            films[6].play()
+            films_big_library[6].play()
 
-        top_films = [films[0], films[1], films[6]]
+        top_films = [films_big_library[0], films_big_library[1], films_big_library[6]]
 
-        self.assertEqual(top_titles(films), top_films)
+        self.assertEqual(top_titles(films_big_library), top_films)
 
 
 if __name__ == "__main__":
