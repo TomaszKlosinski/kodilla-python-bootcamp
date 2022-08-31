@@ -40,9 +40,9 @@ def get_series(films: list[Movie]) -> list[MovieSeries]:
     return [film for film in films if isinstance(film, MovieSeries)]
 
 
-def search(films: list[Movie], search_querry: str) -> Movie | None:
+def search(films: list[Movie], search_query: str) -> Movie | None:
     for film in films:
-        if search_querry in film.title:
+        if search_query in film.title:
             return film
     return None
 
