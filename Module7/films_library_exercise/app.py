@@ -23,12 +23,11 @@ def main() -> None:
 
     run_generate_views(films, 10)
 
-    print("Welcome to the Films Library")
+    print("\nWelcome to the Films Library\n")
 
-    print()
-    print(f"Most popular movies and series of {TODAY}:")
+    print(f"Most popular movies and series of {TODAY}:\n")
     for film in top_titles(films):
-        print(f"\t *  {film} - {film.plays_count} plays")
+        print(f"\t  *  {film} - {film.plays_count} plays")
 
 
 if __name__ == "__main__":
