@@ -1,5 +1,6 @@
 import random
 
+
 class Movie:
     def __init__(self, title: str, release_date: int, genre: str):
         self.title = title
@@ -31,7 +32,6 @@ class MovieSeries(Movie):
         return seasons
 
 
-
 def get_movies(films: list[Movie]) -> list[Movie]:
     return [film for film in films if not isinstance(film, MovieSeries)]
 
@@ -40,7 +40,7 @@ def get_series(films: list[Movie]) -> list[MovieSeries]:
     return [film for film in films if isinstance(film, MovieSeries)]
 
 
-def search(films: list[Movie], search_querry: str) -> Movie|None:
+def search(films: list[Movie], search_querry: str) -> Movie | None:
     for film in films:
         if search_querry in film.title:
             return film
@@ -61,4 +61,3 @@ def top_titles(films: list[Movie], content_type=None) -> list[Movie]:
     top_films = sorted(films, key=lambda film: film.plays_count, reverse=True)
 
     return top_films[:3]
-
