@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <meta name="description" content="Tomasz Klosinki's website">
+    <meta name="author" content="Tomasz Klosinski">
+
+    <title>Tomasz Klosinski's website</title>
+</head>
+
+<body>
+<h1 class="center">Welcome to Tomasz Klosinski's website!</h1>
+<img id="logo" src="{{url_for('static',filename='tux.png')}}" alt="Tux" />
+<div id="content">{% block content %}{% endblock %}</div>
+</body>
+</html>
