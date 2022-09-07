@@ -2,13 +2,13 @@
 
 ## Requirements
 Install requirements:
-```python
+```shell
 pip3 install -r requirements.txt
 ```
 
 ## Run it
 To run it locally:
-```python
+```shell
 export FLASK_ENV=development
 flask run
 ```
