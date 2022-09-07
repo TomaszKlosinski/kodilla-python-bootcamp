@@ -1,6 +1,7 @@
-from flask import Flask, render_template, redirect
+from flask import Flask, render_template, request
 
 app = Flask(__name__)
+
 
 @app.route("/")
 def main():
@@ -15,3 +16,10 @@ def about():
 @app.route("/contact")
 def contact():
     return render_template("contact.html")
+
+
+@app.route('/send_email', methods=['POST'])
+def send_email():
+    email_text = request.form['contact']
+    app.logger.info(f'Email text: "{email_text}"')
+    return email_text
