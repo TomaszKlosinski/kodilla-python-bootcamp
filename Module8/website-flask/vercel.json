@@ -2,14 +2,14 @@
   "version": 2,
   "builds": [
     {
-      "src": "*.py",
+      "src": "Module8/website-flask/*.py",
       "use": "@liudonghua123/now-flask"
     }
   ],
   "routes": [
     {
-      "src": "(.*)",
-      "dest": "app.py"
+      "src": "Module8/website-flask/(.*)",
+      "dest": "Module8/website-flask/app.py"
     }
   ]
 }
