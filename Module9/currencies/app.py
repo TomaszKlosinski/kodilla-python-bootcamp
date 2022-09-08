@@ -36,13 +36,9 @@ def index():
 
     app.logger.debug(rates)
 
-    if request.method == 'GET':
-        return render_template("index.html",
-                               title="Currency Calculator",
-                               rates=rates,
-                               result=None)
+    result = None
 
-    elif request.method == 'POST':
+    if request.method == 'POST':
         currency = request.form['currency']
         amount = request.form['amount']
         price = rates[currency]
@@ -51,10 +47,10 @@ def index():
 
         result = float(amount) * float(price)
 
-        return render_template("index.html",
-                               title="Currency Calculator",
-                               rates=rates,
-                               result=result)
+    return render_template("index.html",
+                           title="Currency Calculator (PLN)",
+                           rates=rates,
+                           result=result)
 
 
 if __name__ == '__main__':
