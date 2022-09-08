@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <meta name="description" content="{{ title }}">
+    <meta name="author" content="Tomasz Klosinski">
+
+    <title>{{ title }}</title>
+</head>
+
+<body>
+    <a href="/"><h1 class="center">{{ title }}</h1></a>
+    <div id="content">
+        <p>
+            <form action="{{ url_for('index') }}" method="post" enctype=”text/plain” name=”currency_converter”>
+                <label for="currency">Choose a currency:</label>
+                <br/>
+                <select name="currency" id="currency">
+                    {% for item in rates %}
+                    <option value="{{ item }}">{{ item }}</option>
+                    {% endfor %}
+                </select>
+                <br/>
+                <label for="amount">Amount:</label>
+                <br/>
+                <input type="number" id="amount" name="amount" min="1">
+                <br/>
+                <input type="submit" value="Convert">
+            </form>
+        </p>
+        <p id="result">
+            {% if result %}
+            Result: {{ result }} PLN</p>
+            {% endif %}
+        </p>
+    </div>
+</body>
+</html>
