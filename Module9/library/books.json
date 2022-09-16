@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Winnie-the-Pooh",
+    "author": "Alan Alexander Milne",
+    "year": 1926,
+    "read": true
+  },
+  {
+    "id": 2,
+    "title": "The House at Pooh Corner",
+    "author": "Alan Alexander Milne",
+    "year": 1928,
+    "read": true
+  }
+]
