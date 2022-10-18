@@ -1,6 +1,7 @@
 import sqlite3
 from sqlite3 import Error
 
+
 def create_connection(db_file):
     """ create a database connection to the SQLite database
         specified by db_file
@@ -16,6 +17,7 @@ def create_connection(db_file):
 
     return conn
 
+
 def execute_sql(conn, sql):
     """ Execute sql
     :param conn: Connection object
@@ -27,6 +29,7 @@ def execute_sql(conn, sql):
         c.execute(sql)
     except Error as e:
         print(e)
+
 
 if __name__ == "__main__":
 
