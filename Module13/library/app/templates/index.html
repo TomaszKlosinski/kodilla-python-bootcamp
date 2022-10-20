@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Library Database</title>
+</head>
+<body>
+<main>
+    <h1>Library Database</h1>
+
+    <h2>Authors</h2>
+    {% for author in authors %}
+    {{ author.name }}
+    {% endfor %}
+
+    <h2>Books</h2>
+    {% for book in books %}
+    {{ book.title }}
+    {% endfor %}
+
+    <h2>Borrows</h2>
+    {% for borrow in borrows %}
+    {{ borrow.borrower }}
+    {% endfor %}
+
+</main>
+</body>
+</html>
