@@ -17,6 +17,11 @@ Migrate the database:
 flask db upgrade
 ```
 
-## Add data to the database
+## Run application
+
+To run application:
+```shell
+flask run
+```
 
 
